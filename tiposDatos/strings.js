@@ -1,0 +1,13 @@
+"use strict";
+var batman = "Batman";
+var linternaVerde = "Linterna Verde";
+var volcanNegro = 'Volcan negro';
+console.log(batman);
+console.log(linternaVerde);
+console.log(volcanNegro);
+var concatenar1 = "Los h\u00E9roes son " + batman + "," + linternaVerde + " y " + volcanNegro;
+console.log(concatenar1);
+var concatenar2 = "Los héroes son" + batman + "," + linternaVerde + ', y ' + volcanNegro;
+console.log(concatenar2);
+var concatenar3 = "Los héroes son".concat(batman).concat(",").concat(linternaVerde).concat(" y ").concat(volcanNegro);
+console.log(concatenar3);
