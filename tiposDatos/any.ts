@@ -12,3 +12,5 @@ console.log(vengador)
 
 //undefined es tipo any en ts
 console.log(existe)
+
+export{}

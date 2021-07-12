@@ -4,3 +4,4 @@ let villanosMarvel:string[] = ["Omega Rojo","Dormammu","Duende Verde"]
 
 console.log(villanosMarvel[0].charAt(0));
 
+export{}

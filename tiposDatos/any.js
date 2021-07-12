@@ -1,4 +1,5 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 var vengador = 123;
 var existe;
 var derrotas;
