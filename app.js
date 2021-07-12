@@ -1,5 +1,6 @@
 "use strict";
 // Tipos
+Object.defineProperty(exports, "__esModule", { value: true });
 var superman = "Clark";
 var batmanNuevo = "Bruce";
 var existe_ = false;

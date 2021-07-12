@@ -38,3 +38,4 @@ function pedir_ayuda():void{
 let poder:String = "100";
 let largoDelPoder:number = poder.length;
 console.log( largoDelPoder );
+export{}
