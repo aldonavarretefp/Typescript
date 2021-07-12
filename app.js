@@ -2,10 +2,10 @@
 // Tipos
 Object.defineProperty(exports, "__esModule", { value: true });
 var superman = "Clark";
-var batmanNuevo = "Bruce";
+var batman = "Bruce";
 var existe_ = false;
 // Tuplas
-var parejaHeroes = [batmanNuevo, superman];
+var parejaHeroes = [batman, superman];
 var villano = ["Lex Lutor", 5, true];
 // Arreglos
 var aliados = ["Mujer Maravilla", "Acuaman", "San", "Flash"];
