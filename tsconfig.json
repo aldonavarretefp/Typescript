@@ -74,9 +74,10 @@
     "forceConsistentCasingInFileNames": true        /* Disallow inconsistently-cased references to the same file. */
   },
   "include": [
-    "objetos_y_tipos_personalizados/**/*"
+    "objetos_y_tipos_personalizados/modulos/**/*",
+    "tiposDatos/**/*"
   ],
   "exclude": [
-    "funciones_y_objetos/modulos/ejercicio_pratico.ts"
+    "funciones_y_objetos/modulos/ejercicio_pratico.ts",
   ]
 }
