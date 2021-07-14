@@ -1,14 +1,11 @@
 export = flash;
-let flash = {
+let flash:  {nombre:string,edad:number,poderes:string[],getNombre:()=>void} = {
     nombre:"Barry Allen",
     edad: 24,
     poderes: ["Puede correr muy rapido","Viajar por el tiempo"]
-}
-console.log(flash)
+    getNombre(){
 
-flash = {
-    nombre: "Clark Kent",
-    edad:500,
-    poderes:["Poder volar"]
+    }
 }
-console.log(flash)
+
+flash.getNombre()
