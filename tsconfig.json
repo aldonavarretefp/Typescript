@@ -8,6 +8,7 @@
     "module": "commonjs",
     "sourceMap": true,
     "strictNullChecks": false,                       /* Specify module code generation: 'none', 'commonjs', 'amd', 'system', 'umd', 'es2015', 'es2020', or 'ESNext'. */
+    "removeComments": true,
     // "rootDir": "src",
     // "lib": [],                                   /* Specify library files to be included in the compilation. */
     // "allowJs": true,                             /* Allow javascript files to be compiled. */
@@ -71,5 +72,11 @@
     /* Advanced Options */
     "skipLibCheck": true,                           /* Skip type checking of declaration files. */
     "forceConsistentCasingInFileNames": true        /* Disallow inconsistently-cased references to the same file. */
-  }
+  },
+  "include": [
+    "objetos_y_tipos_personalizados/**/*"
+  ],
+  "exclude": [
+    "funciones_y_objetos/modulos/ejercicio_pratico.ts"
+  ]
 }
