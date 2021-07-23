@@ -1,24 +1,22 @@
 
 class Avenger{
-    nombre:string;
-    equipo:string;
-    nombreReal:string;
-    puedePelear:Boolean=true;
-    peleasGanadas:number=0;
 
-    constructor(nombre:string,equipo:string,nombreReal:string,puedePelear?:Boolean,peleasGanadas?:number){
-        this.nombre =nombre;
-        this.equipo =equipo;
-        this.nombreReal = nombreReal;
-        this.puedePelear = puedePelear;
-        this.peleasGanadas = peleasGanadas;
+    constructor(public nombre:string,public nombreReal:string){
+    }
+}
+class SuperHeroe extends Avenger {
+    constructor(nombre:string,nombreReal:string,public edad:number){
+        super(nombre,nombreReal);
     }
 }
 
-let captain:Avenger = new Avenger("Cap",'Cap','Steve');
+let captain:Avenger = new Avenger("Cap",'Cap');
 console.log(captain);
 
-let antman:Avenger = new Avenger('Antman','Cap','Aldo',true,4); 
+let antman:Avenger = new Avenger('Antman','Cap'); 
 console.log(antman);
+
+let ciclope:SuperHeroe = new SuperHeroe('Ciclope',"Scott",45);
+console.log(ciclope);
 
 export = antman;
