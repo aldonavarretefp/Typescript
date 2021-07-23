@@ -18,3 +18,5 @@ let wolverine:Xmen = {
 }
 
 enviarMision(wolverine);
+
+export = wolverine;
