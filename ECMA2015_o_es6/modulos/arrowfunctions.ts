@@ -26,3 +26,4 @@ let capitanAmerica = {
 };
 
 capitanAmerica.darOrden_hulk();
+export = capitanAmerica;

@@ -1,5 +1,4 @@
 
-
 class Avenger{
     nombre:string;
     equipo:string;
