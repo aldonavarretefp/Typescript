@@ -28,3 +28,13 @@ const aldo = {
     nombreReal:'Aldo Navarrete'
 }
 console.log(funcionGenerica<Villano>(aldo));
+
+//Ejemplo 3 Arreglos genericos:
+
+let arreglo_heroes:Array<string> = ["Superman","Batman"]
+let arreglo_villanos:string[] = ["Venom","Otro villano"];
+
+arreglo_heroes.reverse() ;
+arreglo_villanos.pop() ;
+console.log(arreglo_heroes);
+console.log(arreglo_villanos);
