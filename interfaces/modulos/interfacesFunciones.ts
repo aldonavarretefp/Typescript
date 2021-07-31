@@ -11,3 +11,4 @@ let restar:DosNumerosFunc;
 restar = function(a:number,b:number){
     return a-b;    
 }
+export = {restar, sumar}

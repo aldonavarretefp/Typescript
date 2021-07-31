@@ -1,6 +1,8 @@
-namespace Validaciones{
-    export function validarTexto(texto:string):boolean{
-        return (texto.length >3)? true : false;
-    }
-
+const MENSAJES:string[] = [
+    'El texto es muy largo',
+    'El texto es muy corto'
+];
+function obtenerError(numError:number):string {
+    return MENSAJES[numError];
+    
 }
