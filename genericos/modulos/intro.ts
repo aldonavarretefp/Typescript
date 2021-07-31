@@ -38,3 +38,19 @@ arreglo_heroes.reverse() ;
 arreglo_villanos.pop() ;
 console.log(arreglo_heroes);
 console.log(arreglo_villanos);
+
+//Clase generica
+
+class Cuadrado<T extends number|string> {
+    base:T;
+    altura:T;
+    area():number{
+        return +this.base* +this.altura;
+    }
+}
+
+let cuadrado = new Cuadrado< number|string>();
+cuadrado.altura ="12";
+cuadrado.base ="12";
+
+console.log(cuadrado.area());
