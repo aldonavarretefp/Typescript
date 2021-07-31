@@ -40,5 +40,14 @@
 // console.log( largoDelPoder );
 
 import { PI } from "./namespaces/validaciones/numeros";
-
 console.log(PI);
+
+
+// import { obtenerError } from "./namespaces/validaciones/textos";
+// console.log(obtenerError(1));
+
+import * as textos from "./namespaces/validaciones/textos";
+console.log(textos.obtenerError(2));
+
+import cualquierOtroNombrePeroYoSeQueEsRestarPorDefault from "./namespaces/validaciones/numeros";
+console.log(cualquierOtroNombrePeroYoSeQueEsRestarPorDefault(5,3))
