@@ -39,3 +39,6 @@
 // let largoDelPoder:number = poder.length;
 // console.log( largoDelPoder );
 
+import { PI } from "./namespaces/validaciones/numeros";
+
+console.log(PI);
