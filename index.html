@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>Hola Mundo</h1>
-    <script src="app.js" type="module"></script>
+    <!-- <script src="app.js" type="module"></script> -->
     <!-- <script src="./tiposDatos/boolean.js" type="module"></script> -->
     <!-- <script src="./tiposDatos/numeros.js" type="module"></script> -->
     <!-- <script src="./tiposDatos/strings.js" type="module"></script> -->
@@ -20,6 +20,20 @@
     <!-- <script src="./tiposDatos/never.js" type="module"></script>  -->
     <!-- <script src="./tiposDatos/asercionesDeTipo.js" type="module"></script>  -->
     <!-- <script src="./tiposDatos/NullyUndefined.js" type="module"></script>  -->
-    <script src="./app.js" type="module"></script>
+    <!-- <script src="./app.js" type="module"></script> -->
+    <!-- NAMESPACES -->
+    <!-- <script src="./namespaces//modulos/introduccion.js"></script> -->
+    <script src="node_modules/systemjs/dist/system.js"></script>
+    <script>
+        SystemJS.config({
+          packages:{ '/':{
+            main:'app.js',
+            defaultExtension:'js',
+            }
+          }
+        })
+        SystemJS.import('app.js');
+      </script>
+    
 </body>
 </html>
