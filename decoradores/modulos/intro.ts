@@ -24,6 +24,38 @@ class Heroe{
     }
 }
 
+//Decorador de metodos
+
+/*
+    Yo decido que metodo es editable, o que puede hacer cada metodo 
+    o que no puede hacer, le doy funcionalidades
+    FORZOSAMENTE RETORNAN UNA FUNCION
+*/
+
+function editable(esEditable:boolean) {
+    return function(target:any,nombrePropiedad:string,descriptor:PropertyDescriptor){
+        if(!esEditable){console.warn("No es editable");
+        }
+        
+        descriptor.writable = esEditable;
+    }
+}
+class Estudiante{
+    constructor(public nombre:string){}
+
+    @editable(true)
+    acabarCarrera(){
+        console.log(`Tal vez no acabe la carrera ${this.nombre}`);
+    }
+}
+
+let aldo = new Estudiante('Aldo');
+aldo.acabarCarrera = function () {
+    console.log(`Obvio ${aldo.nombre} va a acabar la carrera!`);
+}
+aldo.acabarCarrera();
+
+
 
 
 let hola;
