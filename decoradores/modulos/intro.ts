@@ -108,7 +108,7 @@ class Villano{
 
     }
 
-    imprimir(plan:boolean, @parametro mensaje:string):void{
+    imprimir(plan:boolean, @parametro mensaje?:string):void{
         console.log(
             (plan)
             ? "El plan es: " + mensaje 
@@ -117,6 +117,9 @@ class Villano{
     }
         
 }
+
+let lex = new Villano("Lex");
+lex.imprimir(false,'Nuevo plan');
 
 
 let hola;
