@@ -55,42 +55,69 @@
 // }
 // aldo.acabarCarrera();
 
-/* Decoradores de Propiedades */
+// /* Decoradores de Propiedades */
 
-function editable(esEditable:boolean) {
-    return function(target:any,nombrePropiedad:string,descriptor:PropertyDescriptor){
-        descriptor.writable = esEditable;
-    }
-}
-function editableProp(esEditable:boolean) {
-    return function(target:any,nombrePropiedad:string):any{
-        let descriptor:PropertyDescriptor ={
-            writable:esEditable
-        }
+// function editable(esEditable:boolean) {
+//     return function(target:any,nombrePropiedad:string,descriptor:PropertyDescriptor){
+//         descriptor.writable = esEditable;
+//     }
+// }
+// function editableProp(esEditable:boolean) {
+//     return function(target:any,nombrePropiedad:string):any{
+//         let descriptor:PropertyDescriptor ={
+//             writable:esEditable
+//         }
 
-        return descriptor;
-    }
-}
+//         return descriptor;
+//     }
+// }
 
-class Villano {
+// class Villano {
 
-    @editableProp(true)// Aqui va el decorador de una propiedad , pero ya no me deja cambiarlo aunque lo inicialice, se vuelve READ ONLY
-    public nombre:string ;
+//     @editableProp(true)// Aqui va el decorador de una propiedad , pero ya no me deja cambiarlo aunque lo inicialice, se vuelve READ ONLY
+//     public nombre:string ;
     
-    constructor(nombre:string = "Lex Luthor Inicializado"){
-        this.nombre = nombre;
-    }
+//     constructor(nombre:string = "Lex Luthor Inicializado"){
+//         this.nombre = nombre;
+//     }
 
-    @editable(false)
-    plan(){
-        console.log('Es dominar el mundo');
-    }
+//     @editable(false)
+//     plan(){
+//         console.log('Es dominar el mundo');
+//     }
+// }
+
+// let lex = new Villano("Lex");
+// console.log(lex);
+// console.log(`El plan de ${lex.nombre} es:`);
+// lex.plan();
+
+
+/* Decoradores de parámetros */
+
+function parametro(target:any,metodo:string,index:number) {
+    console.log(`Target: ${target}
+    Metodo: ${metodo}
+    Index: ${index}`);
+    console.log(target,metodo,index);
 }
 
-let lex = new Villano("Lex");
-console.log(lex);
-console.log(`El plan de ${lex.nombre} es:`);
-lex.plan();
+
+class Villano{
+    constructor(public nombre:string){
+
+    }
+
+    imprimir(plan:boolean, @parametro mensaje:string):void{
+        console.log(
+            (plan)
+            ? "El plan es: " + mensaje 
+            :  mensaje
+        );
+    }
+        
+}
+
 
 let hola;
 export = hola;
